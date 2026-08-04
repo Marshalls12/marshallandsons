@@ -2,318 +2,615 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marshall & Sons | Dryer Vent Cleaning in Nashville</title>
-<meta name="description" content="Professional dryer vent cleaning serving Nashville, Davidson County, and Wilson County. Flat pricing and online booking.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marshall and Sons | Dryer Vent Cleaning in Nashville</title>
+<meta name="description" content="Professional dryer vent cleaning serving Nashville, Davidson County, and Wilson County. Flat pricing, full-line cleaning, before &amp; after photos, and online booking.">
+<link rel="canonical" href="https://marshallandsons.com/">
 <meta name="theme-color" content="#000000">
-<style>
-:root {
-  --black:#000;
-  --panel:#090b0e;
-  --panel-2:#0f1318;
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Marshall and Sons">
+<meta property="og:title" content="Marshall and Sons | Dryer Vent Cleaning in Nashville">
+<meta property="og:description" content="Professional dryer vent cleaning serving Nashville, Davidson County, and Wilson County. Flat pricing, full-line cleaning, before &amp; after photos, and online booking.">
+<meta property="og:url" content="https://marshallandsons.com/">
+<meta property="og:image" content="https://marshallandsons.com/assets/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20460%20484%22%3E%3Crect%20x%3D%2224.5%22%20y%3D%2223.5%22%20width%3D%22412%22%20height%3D%22438%22%20rx%3D%2228%22%20fill%3D%22none%22%20stroke%3D%22%232E7BC4%22%20stroke-width%3D%2214%22%2F%3E%3Cg%20fill%3D%22%232E7BC4%22%20stroke%3D%22%232E7BC4%22%20stroke-width%3D%227%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M102%2070%20L358%2095%20L386%20152%20L69%20121%20Z%22%2F%3E%3Cpath%20d%3D%22M102%2070%20L358%2095%20L386%20152%20L69%20121%20Z%22%20transform%3D%22translate%280%2C88%29%22%2F%3E%3Cpath%20d%3D%22M102%2070%20L358%2095%20L386%20152%20L69%20121%20Z%22%20transform%3D%22translate%280%2C178%29%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M102%2070%20L358%2095%20L386%20152%20L69%20121%20Z%22%20transform%3D%22translate%280%2C266%29%22%20fill%3D%22%23C1272D%22%20stroke%3D%22%23C1272D%22%20stroke-width%3D%227%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@400;600;700&display=swap"></noscript>
+<style>/* ==========================================================================
+   MARSHALL & SONS — DESIGN SYSTEM
+   Edit this file, then run `python3 build.py` to rebuild every page.
+   ========================================================================== */
+
+/* --- Tokens --------------------------------------------------------------- */
+:root{
+  --black:#000000;
+  --panel:#08090B;        /* elevated surface on black */
+  --panel-2:#0D0F12;      /* second elevation */
   --blue:#0D3B66;
-  --blue-2:#2062A8;
+  --blue-lift:#14538F;    /* hover / focus only */
   --red:#C1272D;
+  --red-lift:#D8353B;
+  --steel:#5A6875;        /* brand secondary — fills, strokes */
+  --steel-text:#8593A1;   /* same family, lifted to pass 4.5:1 on black */
   --bone:#F4F6F8;
-  --muted:#A8B1BA;
-  --line:rgba(244,246,248,.12);
-  --max:1180px;
-  --radius:22px;
-  --shadow:0 28px 80px rgba(0,0,0,.42);
+
+  --line:rgba(244,246,248,.10);
+  --line-strong:rgba(244,246,248,.20);
+
+  --font-display:"Oswald","Arial Narrow",system-ui,sans-serif;
+  --font-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  --font-data:"Barlow Semi Condensed","Barlow","Arial Narrow",sans-serif;
+
+  --r-sm:6px;
+  --r:12px;
+  --r-lg:20px;
+
+  --shadow:0 1px 0 rgba(244,246,248,.06), 0 24px 60px -24px rgba(0,0,0,.9);
+
+  --gutter:24px;
+  --max:1200px;
+  --nav-h:76px;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;background:#000}
+
+/* --- Reset ---------------------------------------------------------------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
 body{
-  margin:0;background:#000;color:var(--bone);
-  font-family:"Barlow","Segoe UI",Arial,sans-serif;
-  line-height:1.6;overflow-x:hidden;
+  margin:0;
+  background:var(--black);
+  color:var(--bone);
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.65;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
-  background:
-    radial-gradient(circle at 50% -10%,rgba(13,59,102,.45),transparent 38%),
-    linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
-  background-size:auto,64px 64px,64px 64px;
-}
+img,svg{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-button{font:inherit}
-img,svg{display:block;max-width:100%}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--font-display);font-weight:700;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--red);color:#fff;padding:14px 20px;font-weight:600}
+.skip:focus{left:12px;top:12px}
+
+/* --- Type scale ----------------------------------------------------------- */
+.h-xl{font-size:clamp(2.75rem,7.4vw,5.25rem)}
+.h-lg{font-size:clamp(2.1rem,4.6vw,3.5rem)}
+.h-md{font-size:clamp(1.5rem,2.6vw,2.1rem)}
+.h-sm{font-size:clamp(1.1rem,1.7vw,1.3rem);letter-spacing:0}
+
+.lede{font-size:clamp(1.05rem,1.5vw,1.22rem);color:#B9C2CC;max-width:56ch;line-height:1.6}
+.muted{color:var(--steel-text)}
+.bone{color:var(--bone)}
+
 .eyebrow{
-  font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
-  color:#7fa7cf;display:flex;align-items:center;gap:12px;
+  font-family:var(--font-data);
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--steel-text);
+  display:flex;align-items:center;gap:12px;
+  margin:0 0 20px;
 }
-.eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
-h1,h2,h3{
-  margin:0;font-family:"Arial Narrow","Segoe UI",Arial,sans-serif;
-  text-transform:uppercase;line-height:.96;letter-spacing:-.025em;
+.eyebrow::before{
+  content:"";width:26px;height:2px;background:var(--red);flex:none;
 }
-h1{font-size:clamp(4.4rem,10vw,8.8rem);max-width:950px}
-h2{font-size:clamp(3rem,6vw,5.8rem)}
-h3{font-size:clamp(1.6rem,2vw,2rem)}
-p{margin:0;color:var(--muted);font-size:1.05rem}
-.lead{font-size:clamp(1.15rem,2vw,1.35rem);max-width:760px}
-.nav{
-  position:fixed;inset:0 0 auto;z-index:50;height:82px;
-  display:flex;align-items:center;border-bottom:1px solid transparent;
-  transition:.25s ease;
+.eyebrow--center{justify-content:center}
+
+.data{font-family:var(--font-data);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+
+/* --- Layout --------------------------------------------------------------- */
+.container{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.container--narrow{max-width:840px}
+.section{padding-block:clamp(72px,10vw,132px);position:relative}
+.section--panel{background:var(--panel);border-block:1px solid var(--line)}
+.section--blue{background:var(--blue)}
+.section-head{max-width:62ch;margin-bottom:clamp(40px,5vw,64px)}
+.section-head--center{margin-inline:auto;text-align:center}
+.section-head--center .eyebrow{justify-content:center}
+.section-head p{margin-top:18px}
+
+.grid{display:grid;gap:20px}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:900px){
+  .grid--3,.grid--4{grid-template-columns:repeat(2,1fr)}
 }
-.nav.scrolled{background:rgba(0,0,0,.86);backdrop-filter:blur(18px);border-color:var(--line)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:13px;min-width:0}
-.brand-mark{width:44px;height:46px;flex:none}
-.brand-text{line-height:1}
-.brand-name{display:block;font-weight:800;letter-spacing:.09em;text-transform:uppercase;font-size:1rem}
-.brand-sub{display:block;color:#768391;letter-spacing:.18em;text-transform:uppercase;font-size:.62rem;margin-top:5px}
-.nav-links{display:flex;gap:28px;align-items:center;font-size:.86rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.nav-links a:not(.btn){color:#c8d0d7}
-.nav-links a:not(.btn):hover{color:#fff}
-.menu{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;padding:9px 12px}
+@media (max-width:620px){
+  .grid--2,.grid--3,.grid--4{grid-template-columns:1fr}
+}
+
+/* --- Buttons -------------------------------------------------------------- */
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;
-  border-radius:12px;border:1px solid transparent;font-weight:800;
-  letter-spacing:.06em;text-transform:uppercase;font-size:.92rem;transition:.2s ease;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:0 30px;
+  font-family:var(--font-display);font-weight:600;font-size:1rem;
+  letter-spacing:.06em;text-transform:uppercase;
+  border-radius:var(--r);border:1px solid transparent;
+  cursor:pointer;
+  transition:transform .18s var(--ease),background-color .18s var(--ease),border-color .18s var(--ease),color .18s var(--ease);
+  will-change:transform;
 }
 .btn:hover{transform:translateY(-2px)}
-.btn-red{background:var(--red);color:#fff;box-shadow:0 16px 35px rgba(193,39,45,.25)}
-.btn-ghost{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.02)}
+.btn:active{transform:translateY(0)}
+.btn--red{background:var(--red);color:#fff}
+.btn--red:hover{background:var(--red-lift)}
+.btn--blue{background:var(--blue);color:var(--bone)}
+.btn--blue:hover{background:var(--blue-lift)}
+.btn--ghost{border-color:var(--line-strong);color:var(--bone);background:transparent}
+.btn--ghost:hover{border-color:var(--bone);background:rgba(244,246,248,.05)}
+.btn--bone{background:var(--bone);color:var(--black)}
+.btn--bone:hover{background:#fff}
+.btn--wide{width:100%}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px}
+
+/* --- Navigation ----------------------------------------------------------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:100;height:var(--nav-h);
+  display:flex;align-items:center;
+  background:transparent;
+  border-bottom:1px solid transparent;
+  transition:background-color .3s var(--ease),border-color .3s var(--ease),backdrop-filter .3s var(--ease);
+}
+.nav.is-stuck{background:rgba(0,0,0,.86);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav__inner{display:flex;align-items:center;gap:32px;width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.nav__links{display:flex;align-items:center;gap:30px;margin-left:auto}
+.nav__link{
+  font-family:var(--font-data);font-size:.92rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:#C4CCD4;
+  padding:6px 0;position:relative;transition:color .2s var(--ease);
+}
+.nav__link::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--red);
+  transition:width .25s var(--ease);
+}
+.nav__link:hover{color:var(--bone)}
+.nav__link:hover::after,.nav__link[aria-current="page"]::after{width:100%}
+.nav__link[aria-current="page"]{color:var(--bone)}
+.nav__cta{min-height:46px;padding:0 22px;font-size:.9rem}
+.nav__toggle{
+  display:none;margin-left:auto;width:46px;height:46px;background:none;border:1px solid var(--line-strong);
+  border-radius:var(--r-sm);align-items:center;justify-content:center;cursor:pointer;
+}
+.nav__toggle span{display:block;width:20px;height:2px;background:var(--bone);position:relative;transition:background .2s}
+.nav__toggle span::before,.nav__toggle span::after{
+  content:"";position:absolute;left:0;width:20px;height:2px;background:var(--bone);transition:transform .25s var(--ease)
+}
+.nav__toggle span::before{top:-7px}
+.nav__toggle span::after{top:7px}
+.nav.is-open .nav__toggle span{background:transparent}
+.nav.is-open .nav__toggle span::before{transform:translateY(7px) rotate(45deg)}
+.nav.is-open .nav__toggle span::after{transform:translateY(-7px) rotate(-45deg)}
+
+@media (max-width:980px){
+  .nav__toggle{display:flex}
+  .nav__links{
+    position:fixed;top:var(--nav-h);left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(0,0,0,.97);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    padding:8px var(--gutter) 28px;
+    transform:translateY(-8px);opacity:0;pointer-events:none;
+    transition:opacity .22s var(--ease),transform .22s var(--ease);
+    max-height:calc(100dvh - var(--nav-h));overflow-y:auto;
+  }
+  .nav.is-open .nav__links{opacity:1;transform:none;pointer-events:auto}
+  .nav__link{padding:18px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+  .nav__link::after{display:none}
+  .nav__cta{margin-top:22px;min-height:56px}
+}
+
+/* --- Logo ----------------------------------------------------------------- */
+.logo{display:flex;align-items:center;gap:13px;--mark-blue:#2062A8}
+.logo__mark{width:42px;height:44px;flex:none}
+.logo__type{display:flex;flex-direction:column;line-height:1}
+.logo__name{font-family:var(--font-display);font-weight:700;font-size:1.02rem;letter-spacing:.11em;text-transform:uppercase}
+.logo__sub{font-family:var(--font-data);font-size:.62rem;font-weight:600;letter-spacing:.24em;color:var(--steel-text);text-transform:uppercase;margin-top:4px}
+.logo--lg{--mark-blue:#14538F}
+.logo--lg .logo__mark{width:74px;height:78px}
+.logo--lg .logo__name{font-size:1.5rem}
+.logo--lg .logo__sub{font-size:.72rem}
+
+/* --- Hero ----------------------------------------------------------------- */
 .hero{
-  min-height:100svh;display:flex;align-items:center;padding:140px 0 90px;text-align:center;position:relative;
+  min-height:100svh;display:flex;align-items:center;
+  padding-top:calc(var(--nav-h) + 40px);padding-bottom:60px;
+  position:relative;overflow:hidden;
 }
-.hero-inner{max-width:980px;margin:auto}
-.hero-mark{width:clamp(92px,11vw,132px);margin:0 auto 34px}
-.hero .eyebrow{justify-content:center;margin-bottom:24px}
-.hero .eyebrow::before{display:none}
-.hero h1 span{display:block;color:#82909d}
-.hero .lead{margin:28px auto 0}
-.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:34px}
-.hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:30px;color:#7e8a96;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em}
-.hero-meta span{display:flex;align-items:center;gap:8px}
-.hero-meta span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red)}
-.trust{border-block:1px solid var(--line);background:#060708}
-.trust-grid{display:grid;grid-template-columns:repeat(5,1fr)}
-.trust-item{padding:28px 14px;text-align:center;border-right:1px solid var(--line)}
-.trust-item:last-child{border-right:0}
-.trust-item strong{display:block;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
-.section{padding:120px 0}
-.section-panel{background:var(--panel);border-block:1px solid var(--line)}
-.section-head{max-width:780px;margin-bottom:58px}
-.section-head p{margin-top:20px}
-.why-list{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.why-row{
-  display:grid;grid-template-columns:90px 1fr;gap:30px;align-items:center;
-  padding:clamp(34px,5vw,64px);background:#050608;transition:.25s ease;
+.hero::after{ /* single blue floor-glow, no gradient overlays on content */
+  content:"";position:absolute;left:50%;bottom:-42%;width:min(1100px,120vw);aspect-ratio:1;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(13,59,102,.42) 0%,transparent 62%);
+  pointer-events:none;
 }
-.why-row:hover{background:#0a0d11}
-.icon-box{
-  width:72px;height:72px;border:1px solid rgba(32,98,168,.45);border-radius:18px;
-  display:grid;place-items:center;background:rgba(13,59,102,.28)
+.hero__inner{position:relative;z-index:1;text-align:center;max-width:940px;margin-inline:auto}
+.hero__mark{width:clamp(76px,10vw,104px);margin:0 auto clamp(28px,4vw,40px);--mark-blue:#14538F}
+.hero__mark svg{width:100%;height:auto}
+.hero h1{margin-bottom:26px}
+.hero .lede{margin-inline:auto}
+.hero h1 em{font-style:normal;color:var(--steel-text);display:block}
+.hero__cta{margin-top:36px;justify-content:center}
+.hero__note{margin-top:30px;justify-content:center;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--font-data);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel-text)}
+.hero__note span{display:flex;align-items:center;gap:8px}
+.hero__note span::before{content:"";width:5px;height:5px;background:var(--red);border-radius:50%}
+@media (max-width:980px){
+  .hero{min-height:0;padding-top:calc(var(--nav-h) + 56px);padding-bottom:72px}
 }
-.icon-box svg{width:34px;height:34px;stroke:#f4f6f8;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.why-row p{max-width:700px;margin-top:10px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+/* --- Trust strip ---------------------------------------------------------- */
+.trust{border-block:1px solid var(--line);background:var(--panel)}
+.trust__list{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line)}
+.trust__item{
+  background:var(--panel);display:flex;flex-direction:column;align-items:center;gap:12px;
+  padding:34px 16px;text-align:center;
+}
+.trust__item svg{width:30px;height:30px;stroke:var(--bone);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s var(--ease),transform .25s var(--ease)}
+.trust__item:hover svg{stroke:var(--red);transform:translateY(-3px)}
+.trust__item span{font-family:var(--font-data);font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C4CCD4}
+@media (max-width:900px){.trust__list{grid-template-columns:repeat(2,1fr)}
+  .trust__item:last-child{grid-column:1/-1}}
+
+/* --- Cards ---------------------------------------------------------------- */
 .card{
-  border:1px solid var(--line);border-radius:var(--radius);padding:34px;background:linear-gradient(145deg,#0d1116,#07090c);
-  min-height:260px;transition:.25s ease;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(26px,3vw,36px);
+  transition:transform .3s var(--ease),border-color .3s var(--ease),background-color .3s var(--ease);
+  height:100%;
 }
-.card:hover{transform:translateY(-5px);border-color:rgba(32,98,168,.45)}
-.card .kicker{color:var(--red);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px}
-.card p{margin-top:16px}
+.card:hover{transform:translateY(-5px);border-color:var(--line-strong);background:var(--panel-2)}
+.card h3{margin-bottom:14px}
+.card p{color:#A9B3BD;font-size:1rem}
+.card__icon{
+  width:52px;height:52px;border-radius:var(--r);background:rgba(13,59,102,.35);border:1px solid rgba(13,59,102,.9);
+  display:flex;align-items:center;justify-content:center;margin-bottom:24px;
+}
+.card__icon svg{width:26px;height:26px;stroke:var(--bone);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card--step{position:relative;padding-top:32px}
+.card__step{
+  font-family:var(--font-data);font-weight:700;font-size:.8rem;letter-spacing:.2em;color:var(--red);
+  display:block;margin-bottom:18px;
+}
+
+/* --- Pricing -------------------------------------------------------------- */
 .price{
-  max-width:680px;margin:auto;border:1px solid rgba(255,255,255,.18);
-  border-radius:30px;padding:clamp(36px,6vw,64px);background:#050608;box-shadow:var(--shadow);text-align:center;
+  max-width:620px;margin-inline:auto;text-align:center;
+  background:var(--panel);border:1px solid var(--line-strong);border-radius:var(--r-lg);
+  padding:clamp(32px,5vw,56px);box-shadow:var(--shadow);position:relative;overflow:hidden;
 }
-.price-number{font-size:clamp(6rem,15vw,10rem);line-height:.9;font-weight:900;letter-spacing:-.06em}
-.price-number sup{font-size:.28em;vertical-align:top;position:relative;top:18px;color:#7d8995}
-.price-list{list-style:none;padding:0;margin:34px 0;text-align:left;border-block:1px solid var(--line)}
-.price-list li{padding:14px 0;border-bottom:1px solid var(--line);color:#c5ced6}
-.price-list li:last-child{border-bottom:0}
-.price-list li::before{content:"✓";color:var(--red);font-weight:900;margin-right:12px}
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{padding:30px;border-left:2px solid var(--blue-2);background:#07090c;border-radius:0 18px 18px 0}
-.step-num{font-size:.78rem;letter-spacing:.2em;color:var(--red);font-weight:800;text-transform:uppercase}
-.step h3{margin-top:18px}
-.step p{margin-top:12px}
-.area{
-  display:flex;align-items:end;justify-content:space-between;gap:40px;
-  padding:48px;border:1px solid var(--line);border-radius:26px;background:#07090c;
+.price::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--red)}
+.price__figure{
+  font-family:var(--font-data);font-weight:700;font-size:clamp(4.5rem,13vw,7.5rem);line-height:.9;
+  margin:18px 0 6px;letter-spacing:-.03em;
 }
-.towns{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.town{padding:10px 14px;border:1px solid var(--line);border-radius:999px;color:#c2cbd3;font-size:.9rem}
-.faq{max-width:850px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;list-style:none;padding:24px 40px 24px 0;font-weight:800;font-size:1.15rem;text-transform:uppercase;position:relative}
-.faq summary::after{content:"+";position:absolute;right:0;color:var(--red);font-size:1.6rem}
-.faq details[open] summary::after{content:"–"}
-.faq p{padding:0 0 24px;max-width:720px}
-.cta{
-  text-align:center;padding:120px 0;position:relative;overflow:hidden;
+.price__figure sup{font-size:.34em;vertical-align:super;color:var(--steel-text);margin-right:4px}
+.price__unit{font-family:var(--font-data);letter-spacing:.18em;text-transform:uppercase;color:var(--steel-text);font-size:.82rem}
+.price__list{
+  margin:34px 0;padding:28px 0;border-block:1px solid var(--line);
+  display:grid;gap:14px;text-align:left;
 }
-.cta::before{content:"";position:absolute;width:800px;height:800px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(13,59,102,.42),transparent 65%);z-index:-1}
-.footer{border-top:1px solid var(--line);background:#050608;padding:56px 0 28px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.footer small{color:#71808e}
-.reveal{opacity:0;transform:translateY(22px);transition:.65s ease}
-.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){
-  .nav-links{position:fixed;top:82px;left:20px;right:20px;background:#080a0d;border:1px solid var(--line);border-radius:18px;padding:22px;display:none;flex-direction:column;align-items:stretch}
-  .nav-links.open{display:flex}
-  .menu{display:block}
-  .trust-grid{grid-template-columns:repeat(2,1fr)}
-  .trust-item:nth-child(2n){border-right:0}
-  .trust-item:last-child{grid-column:1/-1;border-top:1px solid var(--line)}
-  .cards,.timeline{grid-template-columns:1fr 1fr}
-  .area{display:block}
-  .area .btn{margin-top:28px}
+.price__list li{display:flex;gap:14px;align-items:flex-start;color:#C4CCD4;font-size:1rem}
+.price__list svg{width:20px;height:20px;flex:none;margin-top:4px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.price__fine{margin-top:22px;font-size:.9rem;color:var(--steel-text)}
+
+/* --- Town list ----------------------------------------------------------- */
+.towns{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}
+.towns li{
+  font-family:var(--font-data);font-size:.95rem;letter-spacing:.06em;color:#C4CCD4;
+  padding:14px 18px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-sm);
 }
-@media(max-width:620px){
-  .container{width:min(100% - 28px,var(--max))}
-  .brand-name{font-size:.88rem}
-  .brand-sub{font-size:.55rem}
-  .hero{padding-top:120px;min-height:auto}
-  h1{font-size:3.9rem}
-  .why-row{grid-template-columns:1fr}
-  .cards,.timeline{grid-template-columns:1fr}
-  .section{padding:84px 0}
-  .footer-grid{grid-template-columns:1fr}
+@media (max-width:620px){.towns{grid-template-columns:1fr}}
+
+/* --- Reviews -------------------------------------------------------------- */
+.review{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(26px,3vw,34px);display:flex;flex-direction:column;gap:18px;height:100%;
+}
+.stars{display:flex;gap:3px}
+.stars svg{width:18px;height:18px;fill:#F5A623}
+.review p{font-size:1.02rem;color:#D3DAE1;line-height:1.6}
+.review__who{display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+.review__avatar{
+  width:42px;height:42px;border-radius:50%;background:var(--blue);flex:none;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:600;font-size:.95rem;letter-spacing:.04em;
+}
+.review__name{font-weight:600;font-size:.98rem;line-height:1.3}
+.review__meta{font-family:var(--font-data);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel-text)}
+
+/* --- FAQ accordion -------------------------------------------------------- */
+.faq{border-top:1px solid var(--line)}
+.faq__item{border-bottom:1px solid var(--line)}
+.faq__item summary{
+  list-style:none;cursor:pointer;padding:26px 52px 26px 0;position:relative;
+  font-family:var(--font-display);font-weight:600;font-size:clamp(1.05rem,2vw,1.28rem);
+  text-transform:uppercase;letter-spacing:.01em;line-height:1.3;
+  transition:color .2s var(--ease);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary:hover{color:#9FB4C9}
+.faq__item summary::after,.faq__item summary::before{
+  content:"";position:absolute;right:8px;top:50%;background:var(--red);transition:transform .3s var(--ease),opacity .3s var(--ease)
+}
+.faq__item summary::before{width:16px;height:2px;transform:translateY(-50%)}
+.faq__item summary::after{width:2px;height:16px;right:15px;transform:translateY(-50%)}
+.faq__item[open] summary::after{transform:translateY(-50%) rotate(90deg);opacity:0}
+.faq__answer{padding:0 60px 30px 0;color:#A9B3BD;max-width:70ch}
+.faq__answer p + p{margin-top:14px}
+.faq__item[open] .faq__answer{animation:fadeUp .35s var(--ease)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* --- Forms ---------------------------------------------------------------- */
+.form{display:grid;gap:20px}
+.field{display:grid;gap:9px}
+.field label{
+  font-family:var(--font-data);font-size:.8rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--steel-text);
+}
+.field input,.field select,.field textarea{
+  background:var(--panel-2);border:1px solid var(--line-strong);border-radius:var(--r);
+  padding:16px 18px;font-size:1rem;color:var(--bone);width:100%;
+  transition:border-color .2s var(--ease),background-color .2s var(--ease);
+  min-height:56px;
+}
+.field textarea{min-height:132px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#6E7A87}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:rgba(244,246,248,.32)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue-lift);background:#0A1520}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238593A1' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:20px;padding-right:48px}
+.field__hint{font-size:.86rem;color:var(--steel-text)}
+.field--error input,.field--error select,.field--error textarea{border-color:var(--red)}
+.field__error{font-size:.86rem;color:#E68A8E;display:none}
+.field--error .field__error{display:block}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:620px){.form__row{grid-template-columns:1fr}}
+.form__panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(26px,4vw,44px)}
+.form__success{
+  display:none;text-align:center;padding:clamp(30px,5vw,50px) 20px;
+}
+.form__success svg{width:56px;height:56px;margin:0 auto 22px;stroke:var(--red);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.is-sent .form__success{display:block}
+.is-sent .form{display:none}
+
+/* --- Split feature -------------------------------------------------------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.split--flip .split__media{order:-1}
+@media (max-width:900px){.split{grid-template-columns:1fr}.split--flip .split__media{order:0}}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;margin-top:36px}
+.stat{background:var(--panel);padding:26px 20px}
+.stat strong{display:block;font-family:var(--font-data);font-weight:700;font-size:clamp(1.8rem,4vw,2.4rem);line-height:1;margin-bottom:8px}
+.stat span{font-family:var(--font-data);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel-text);line-height:1.4;display:block}
+@media (max-width:620px){.stat-row{grid-template-columns:1fr}}
+
+/* --- CTA band ------------------------------------------------------------- */
+.cta{text-align:center;position:relative;overflow:hidden;background:var(--black)}
+.cta::before{
+  content:"";position:absolute;left:50%;top:50%;width:min(900px,110vw);aspect-ratio:1;transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(13,59,102,.4) 0%,transparent 62%);pointer-events:none;
+}
+.cta .container{position:relative;z-index:1}
+.cta .btn-row{justify-content:center;margin-top:34px}
+.cta__phone{
+  display:inline-block;margin-top:30px;font-family:var(--font-data);font-size:.84rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--steel-text);
+}
+
+/* --- Footer --------------------------------------------------------------- */
+.footer{background:var(--panel);border-top:1px solid var(--line);padding-block:64px 0}
+.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px}
+@media (max-width:900px){.footer__grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.footer__grid{grid-template-columns:1fr}}
+.footer h4{font-size:.82rem;letter-spacing:.18em;color:var(--steel-text);margin-bottom:20px;font-family:var(--font-data);font-weight:600}
+.footer li + li{margin-top:12px}
+.footer a{color:#C4CCD4;transition:color .2s var(--ease)}
+.footer a:hover{color:var(--bone)}
+.footer__blurb{color:var(--steel-text);margin-top:22px;max-width:34ch;font-size:.96rem}
+.footer__social{display:flex;gap:12px;margin-top:24px}
+.footer__social a{
+  width:44px;height:44px;border:1px solid var(--line);border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;transition:border-color .2s var(--ease),background-color .2s var(--ease)
+}
+.footer__social a:hover{border-color:var(--line-strong);background:var(--panel-2)}
+.footer__social svg{width:18px;height:18px;fill:#C4CCD4}
+.footer__bar{
+  margin-top:56px;border-top:1px solid var(--line);padding-block:26px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-family:var(--font-data);font-size:.8rem;letter-spacing:.08em;color:var(--steel-text);text-transform:uppercase;
+}
+
+/* --- Mobile sticky call bar ---------------------------------------------- */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:95;display:none;
+  gap:1px;background:var(--line);border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.callbar a{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:9px;
+  min-height:62px;font-family:var(--font-display);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem;
+}
+.callbar a:first-child{background:var(--red);color:#fff}
+.callbar a:last-child{background:var(--panel-2);color:var(--bone)}
+.callbar svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:768px){
+  .callbar{display:flex}
+  body{padding-bottom:62px}
+}
+
+/* --- Page header (interior pages) ---------------------------------------- */
+.pagehead{padding-top:calc(var(--nav-h) + clamp(56px,8vw,110px));padding-bottom:clamp(44px,6vw,72px);position:relative;overflow:hidden}
+.pagehead::after{
+  content:"";position:absolute;left:50%;top:-30%;width:min(1000px,120vw);aspect-ratio:1;transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(13,59,102,.34) 0%,transparent 60%);pointer-events:none;
+}
+.pagehead .container{position:relative;z-index:1}
+.pagehead h1{max-width:18ch}
+.pagehead p{margin-top:22px}
+.crumbs{font-family:var(--font-data);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-text);margin-bottom:22px}
+.crumbs a:hover{color:var(--bone)}
+
+/* --- Scroll reveal -------------------------------------------------------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.09s}
+.reveal[data-d="2"]{transition-delay:.18s}
+.reveal[data-d="3"]{transition-delay:.27s}
+.reveal[data-d="4"]{transition-delay:.36s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* --- Small-screen refinements -------------------------------------------- */
+@media (max-width:520px){
+  .btn-row{flex-direction:column;align-items:stretch}
+  .btn-row .btn{width:100%}
+  .hero__note{gap:8px 16px;font-size:.78rem}
+  .faq__item summary{padding-right:44px}
+  .faq__answer{padding-right:0}
 }
 </style>
+<script type="application/ld+json">{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "@id":"https://marshallandsons.com/#business",
+  "name":"Marshall and Sons",
+  "description":"Specialist dryer vent cleaning in Nashville, Tennessee. Flat-rate pricing, full-line cleaning, and photo documentation on every job.",
+  "url":"https://marshallandsons.com",
+  "telephone":"+16155550142",
+  "email":"hello@marshallandsons.com",
+  "priceRange":"$$",
+  "image":"https://marshallandsons.com/assets/social-card.png",
+  "address":{"@type":"PostalAddress","addressLocality":"Nashville","addressRegion":"TN","addressCountry":"US"},
+  "areaServed":[
+    {"@type":"AdministrativeArea","name":"Davidson County, Tennessee"},
+    {"@type":"AdministrativeArea","name":"Wilson County, Tennessee"}
+  ],
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"19:00"}],
+  "makesOffer":{"@type":"Offer","name":"Standard dryer vent cleaning","price":"199","priceCurrency":"USD"},
+  "sameAs":["https://facebook.com/","https://g.page/"]
+}</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="nav" id="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="#top">
-      <svg aria-hidden="true" aria-label="Marshall and Sons louver mark" class="brand-mark" role="img" viewbox="0 0 460 484">
-<rect fill="none" height="435" rx="27" stroke="var(--mark-blue,#2062A8)" stroke-width="13" width="410" x="24.5" y="24.5"></rect>
-<g fill="var(--mark-blue,#2062A8)">
-<circle cx="52" cy="45" r="10"></circle><circle cx="408" cy="45" r="10"></circle>
-<circle cx="52" cy="439" r="10"></circle><circle cx="408" cy="439" r="10"></circle>
-</g>
-<g stroke-linejoin="round" stroke-width="7">
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)" transform="translate(0,88)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)" transform="translate(0,178)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="#C1272D" stroke="#C1272D" transform="translate(0,266)"></path>
-</g>
+  <div class="nav__inner">
+    <a class="logo" href="index.html" aria-label="Marshall and Sons, home">
+      <svg class="logo__mark" viewBox="0 0 460 484" role="img" aria-label="Marshall and Sons louver mark">
+  <rect x="24.5" y="24.5" width="410" height="435" rx="27" fill="none" stroke="var(--mark-blue,#2062A8)" stroke-width="13"/>
+  <g fill="var(--mark-blue,#2062A8)">
+    <circle cx="52" cy="45" r="10"/><circle cx="408" cy="45" r="10"/>
+    <circle cx="52" cy="439" r="10"/><circle cx="408" cy="439" r="10"/>
+  </g>
+  <g stroke-linejoin="round" stroke-width="7">
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,88)" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,178)" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,266)" fill="#C1272D" stroke="#C1272D"/>
+  </g>
 </svg>
-      <span class="brand-text">
-        <span class="brand-name">Marshall and Sons</span>
-        <span class="brand-sub">Dryer Vent Cleaning</span>
+      <span class="logo__type">
+        <span class="logo__name">Marshall and Sons</span>
+        <span class="logo__sub">Dryer Vent Cleaning</span>
       </span>
     </a>
-    <button class="menu" id="menu" aria-label="Open menu">☰</button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#why">Why It Matters</a>
-      <a href="#service">Why Us</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#process">Process</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn-red" href="#book">Book Now</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span></button>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a class="nav__link" href="services.html">Services</a><a class="nav__link" href="pricing.html">Pricing</a><a class="nav__link" href="why-us.html">Why Us</a><a class="nav__link" href="service-area.html">Service Area</a><a class="nav__link" href="index.html#reviews">Reviews</a><a class="nav__link" href="faq.html">FAQ</a>
+      <a class="btn btn--red nav__cta" href="book.html">Book Now</a>
     </nav>
   </div>
 </header>
-
-<main id="top">
+<main id="main">
 <section class="hero">
-  <div class="container hero-inner reveal">
-    <svg aria-hidden="true" aria-label="Marshall and Sons louver mark" class="hero-mark" role="img" viewbox="0 0 460 484">
-<rect fill="none" height="435" rx="27" stroke="var(--mark-blue,#2062A8)" stroke-width="13" width="410" x="24.5" y="24.5"></rect>
-<g fill="var(--mark-blue,#2062A8)">
-<circle cx="52" cy="45" r="10"></circle><circle cx="408" cy="45" r="10"></circle>
-<circle cx="52" cy="439" r="10"></circle><circle cx="408" cy="439" r="10"></circle>
-</g>
-<g stroke-linejoin="round" stroke-width="7">
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)" transform="translate(0,88)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)" transform="translate(0,178)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="#C1272D" stroke="#C1272D" transform="translate(0,266)"></path>
-</g>
-</svg>
-    <p class="eyebrow">Nashville · Davidson & Wilson County</p>
-    <h1>Dryer vent cleaning.<span>Done right.</span></h1>
-    <p class="lead">Residential dryer vent cleaning with one clear price, full-line cleaning, and before-and-after photos.</p>
-    <div class="actions">
-      <a class="btn btn-red" href="#book">Book Online</a>
-      <a class="btn btn-ghost" href="tel:+16155550142">Call (615) 555-0142</a>
-    </div>
-    <div class="hero-meta"><span>$199 flat rate</span><span>Licensed & insured</span><span>Photos every job</span></div>
-  </div>
-</section>
-
-<section class="trust">
-  <div class="container trust-grid">
-    <div class="trust-item"><strong>Licensed</strong></div>
-    <div class="trust-item"><strong>Insured</strong></div>
-    <div class="trust-item"><strong>Full line cleaned</strong></div>
-    <div class="trust-item"><strong>Before & after photos</strong></div>
-    <div class="trust-item"><strong>Flat pricing</strong></div>
-  </div>
-</section>
-
-<section class="section section-panel" id="why">
   <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Why it matters</p>
-      <h2>Three reasons this is not optional.</h2>
-    </div>
-    <div class="why-list">
-      <article class="why-row reveal">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24"><path d="M12 22c4 0 6.5-2.7 6.5-6.2 0-4.6-4.5-6-4-11.8-2.6 1.3-4.6 4-4.6 6.6 0 1.2.4 2 .4 2S9 11 8 9.6c-1.6 1.7-2.5 3.8-2.5 6.2C5.5 19.3 8 22 12 22Z"/></svg>
-        </div>
-        <div><h3>Reduce fire risk</h3><p>Lint collects inside the vent and sits in the path of hot exhaust. Cleaning the line removes that buildup.</p></div>
-      </article>
-      <article class="why-row reveal">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
-        </div>
-        <div><h3>Use less energy</h3><p>A clear vent helps the dryer move heat and moisture out faster, which can reduce repeat cycles.</p></div>
-      </article>
-      <article class="why-row reveal">
-        <div class="icon-box">
-          <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="14" r="4.5"/><path d="M7.5 6.5h2"/></svg>
-        </div>
-        <div><h3>Protect the dryer</h3><p>Less heat and strain means less wear on the heating element, blower motor, and other parts.</p></div>
-      </article>
+    <div class="hero__inner reveal is-in">
+      <div class="hero__mark"><svg  viewBox="0 0 460 484" role="img" aria-label="Marshall and Sons louver mark">
+  <rect x="24.5" y="24.5" width="410" height="435" rx="27" fill="none" stroke="var(--mark-blue,#2062A8)" stroke-width="13"/>
+  <g fill="var(--mark-blue,#2062A8)">
+    <circle cx="52" cy="45" r="10"/><circle cx="408" cy="45" r="10"/>
+    <circle cx="52" cy="439" r="10"/><circle cx="408" cy="439" r="10"/>
+  </g>
+  <g stroke-linejoin="round" stroke-width="7">
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,88)" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,178)" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,266)" fill="#C1272D" stroke="#C1272D"/>
+  </g>
+</svg></div>
+      <p class="eyebrow eyebrow--center">Nashville &middot; Davidson &amp; Wilson County</p>
+      <h1 class="h-xl">Dryer vent cleaning done right.<em>Documented. Not guessed.</em></h1>
+      <p class="lede">Protect your home. Improve dryer performance. Lower energy costs. Professional dryer vent cleaning throughout Nashville, at one flat rate.</p>
+      <div class="btn-row hero__cta">
+        <a class="btn btn--red" href="book.html">Book online</a>
+        <a class="btn btn--ghost" href="tel:+16155550142"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L21 14.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 5.2 2 2 0 0 1 6.5 3Z"/></svg> Call (615) 555-0142</a>
+      </div>
+      <div class="hero__note">
+        <span>Flat $199</span>
+        <span>Licensed &amp; insured</span>
+        <span>Photos every job</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="service">
+<section class="trust" aria-label="Credentials">
+  <div class="container"><ul class="trust__list"><li class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 20 5.5v6C20 17 16.4 20.6 12 22 7.6 20.6 4 17 4 11.5v-6L12 2Z"/><path d="m9 12 2 2 4-4"/></svg><span>Licensed</span></li><li class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-9 9h18a9 9 0 0 0-9-9Z"/><path d="M12 12v6.5a2.5 2.5 0 0 0 5 0"/></svg><span>Insured</span></li><li class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c2.5 0 4-1.5 4-4M8.5 16.5 18 7a2.1 2.1 0 0 0-3-3l-9.5 9.5"/><path d="m13.5 5.5 5 5"/></svg><span>Full line cleaned</span></li><li class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>Before &amp; after photos</span></li><li class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8L3 12Z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg><span>Flat pricing</span></li></ul></div>
+</section>
+
+<section class="section">
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">Why Marshall and Sons</p>
-      <h2>We clean dryer vents. That is the job.</h2>
+      <h2 class="h-lg">One job. Done to a standard.</h2>
+      <p class="lede">We do not do gutters, windows, air ducts, or dryer repair. We clean dryer vents, all day, every day, and we can tell you exactly what changed when we leave.</p>
     </div>
-    <div class="cards">
-      <article class="card reveal"><div class="kicker">01</div><h3>One service</h3><p>Dryer vent cleaning is our main service, not an add-on to a long list of unrelated work.</p></article>
-      <article class="card reveal"><div class="kicker">02</div><h3>Proper equipment</h3><p>We use rotary brush equipment, vacuum extraction, and an inspection camera for the vent line.</p></article>
-      <article class="card reveal"><div class="kicker">03</div><h3>Clear pricing</h3><p>Standard service is $199. Any extra charge is explained before the work begins.</p></article>
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 5.5a5 5 0 0 1-6.6 6.6L5 20.5 3.5 19l8.4-8.4A5 5 0 0 1 18.5 4l-3 3 2 2 3-3Z"/></svg></div>
+        <h3 class="h-sm">Specialists, not generalists</h3>
+        <p>A dryer vent is a sealed line you cannot see into. Reading one by feel takes repetition. This is the only service we sell, so every crew member has done it hundreds of times.</p>
+      </article>
+      <article class="card reveal" data-d="1">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c2.5 0 4-1.5 4-4M8.5 16.5 18 7a2.1 2.1 0 0 0-3-3l-9.5 9.5"/><path d="m13.5 5.5 5 5"/></svg></div>
+        <h3 class="h-sm">Professional equipment</h3>
+        <p>Rotary brush systems that reach the full duct run, HEPA extraction that captures lint at the source, and an inspection camera for the before and after shots. Not a shop vac and a leaf blower.</p>
+      </article>
+      <article class="card reveal" data-d="2">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8L3 12Z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg></div>
+        <h3 class="h-sm">Transparent pricing</h3>
+        <p>$199 covers a standard cleaning, start to finish. The two common add-ons &mdash; roof terminations and duct runs over 25 feet &mdash; are published on the pricing page and confirmed before we start.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section section-panel" id="pricing">
+<section class="section section--panel" id="pricing">
   <div class="container">
-    <div class="section-head reveal" style="text-align:center;margin-inline:auto">
-      <p class="eyebrow" style="justify-content:center">Pricing</p>
-      <h2>One price. Everything included.</h2>
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">Pricing</p>
+      <h2 class="h-lg">One price. Everything included.</h2>
     </div>
     <div class="price reveal">
-      <p class="eyebrow" style="justify-content:center">Standard cleaning</p>
-      <div class="price-number"><sup>$</sup>199</div>
-      <p>One dryer · Most homes · No trip fee</p>
-      <ul class="price-list">
-        <li>Full vent line cleaned from the dryer to the outside vent</li>
-        <li>Exterior hood and damper cleaned</li>
-        <li>Transition hose checked and reconnected</li>
-        <li>Before-and-after photos</li>
-        <li>Work area cleaned before we leave</li>
-      </ul>
-      <a class="btn btn-red" href="#book">Book This Service</a>
-    </div>
+  <p class="eyebrow eyebrow--center">Standard dryer vent cleaning</p>
+  <p class="price__figure data"><sup>$</sup>199</p>
+  <p class="price__unit">Flat rate &nbsp;&middot;&nbsp; One dryer &nbsp;&middot;&nbsp; Most homes</p>
+  <ul class="price__list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Full vent line cleaned from the dryer to the exterior hood</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Rotary brush and compressed-air agitation, then vacuum extraction</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Every elbow cleared, not just the first six feet of duct</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Exterior vent hood and damper cleaned and checked</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Dryer pulled out, transition hose inspected and reconnected</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Before and after photos of your own duct, texted the same day</span></li></ul>
+  <a class="btn btn--red btn--wide" href="book.html">Book this service</a>
+  <p class="price__fine">No trip fee, no fuel surcharge, no upsell script. If your vent runs longer than 25 feet or exits through the roof, we tell you the exact add-on before we start &mdash; not after.</p>
+</div>
   </div>
 </section>
 
@@ -321,92 +618,316 @@ p{margin:0;color:var(--muted);font-size:1.05rem}
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">The visit</p>
-      <h2>Four simple steps.</h2>
+      <h2 class="h-lg">Four steps.<br>About 45 minutes.</h2>
+      <p class="lede">Every job runs the same way, in the same order, whether it is a townhouse in Germantown or a two-story in Mt. Juliet.</p>
     </div>
-    <div class="timeline">
-      <article class="step reveal"><div class="step-num">Step 01</div><h3>Schedule</h3><p>Choose a time online or call us.</p></article>
-      <article class="step reveal"><div class="step-num">Step 02</div><h3>Inspect</h3><p>We check the dryer connection and outside vent.</p></article>
-      <article class="step reveal"><div class="step-num">Step 03</div><h3>Clean</h3><p>We clean the full accessible vent line.</p></article>
-      <article class="step reveal"><div class="step-num">Step 04</div><h3>Review</h3><p>We show you the photos and explain what we found.</p></article>
+    <div class="grid grid--4"><article class="card card--step reveal" data-d="0">
+      <span class="card__step">Step 01</span>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div>
+      <h3 class="h-sm">Schedule</h3>
+      <p>Pick a two-hour arrival window online or by phone. You get a text when the van is 30 minutes out.</p>
+    </article><article class="card card--step reveal" data-d="1">
+      <span class="card__step">Step 02</span>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+      <h3 class="h-sm">Inspect</h3>
+      <p>We find the exterior hood, check the transition hose, and photograph the duct interior before anything is touched.</p>
+    </article><article class="card card--step reveal" data-d="2">
+      <span class="card__step">Step 03</span>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c2.5 0 4-1.5 4-4M8.5 16.5 18 7a2.1 2.1 0 0 0-3-3l-9.5 9.5"/><path d="m13.5 5.5 5 5"/></svg></div>
+      <h3 class="h-sm">Clean</h3>
+      <p>A rotary brush runs the full duct while a HEPA vacuum captures everything at the source. No lint in your laundry room.</p>
+    </article><article class="card card--step reveal" data-d="3">
+      <span class="card__step">Step 04</span>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+      <h3 class="h-sm">Document</h3>
+      <p>We photograph the cleaned line at the same points as the before shots, then text you the pair before we leave your street.</p>
+    </article></div>
+  </div>
+</section>
+
+<section class="section section--panel">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Why it matters</p>
+      <h2 class="h-lg">Three reasons this is not optional</h2>
+    </div>
+    <div class="grid grid--3">
+      <article class="card reveal">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4 0 6.5-2.7 6.5-6.2 0-4.6-4.5-6-4-11.8-2.6 1.3-4.6 4-4.6 6.6 0 1.2.4 2 .4 2S9 11 8 9.6c-1.6 1.7-2.5 3.8-2.5 6.2C5.5 19.3 8 22 12 22Z"/></svg></div>
+        <h3 class="h-sm">Prevent fires</h3>
+        <p>Failure to clean the vent is the leading cause of home clothes-dryer fires. Lint is dry, fine, and sitting directly in the path of hot exhaust. Removing it removes the fuel.</p>
+      </article>
+      <article class="card reveal" data-d="1">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
+        <h3 class="h-sm">Lower energy bills</h3>
+        <p>A restricted vent forces the same load through two or three cycles. Clear the line and the dryer goes back to doing the job once, which is what your utility bill was expecting.</p>
+      </article>
+      <article class="card reveal" data-d="2">
+        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="14" r="4.5"/><path d="M7.5 6.5h2"/></svg></div>
+        <h3 class="h-sm">Extend dryer life</h3>
+        <p>Heating elements, thermal fuses, and blower motors fail early when they run hot against a blocked line. An annual cleaning is a fraction of the cost of a new machine.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section section-panel">
-  <div class="container">
-    <div class="area reveal">
-      <div>
-        <p class="eyebrow">Service area</p>
-        <h2 style="font-size:clamp(2.6rem,5vw,4.6rem)">Davidson and Wilson County.</h2>
-        <div class="towns">
-          <span class="town">Nashville</span><span class="town">Mt. Juliet</span><span class="town">Lebanon</span>
-          <span class="town">Hermitage</span><span class="town">Donelson</span><span class="town">Old Hickory</span>
-        </div>
-      </div>
-      <a class="btn btn-ghost" href="#book">Check Availability</a>
+<section class="section" id="service-area">
+  <div class="container container--narrow">
+    <div class="section-head reveal">
+      <p class="eyebrow">Service area</p>
+      <h2 class="h-lg">Nashville and everything east of it.</h2>
+      <p class="lede">Proudly serving homeowners throughout Nashville and surrounding communities. We cover all of Davidson County and Wilson County, and we do not charge a trip fee anywhere inside that line.</p>
     </div>
+    <ul class="towns reveal">
+      <li>Nashville</li><li>Mt. Juliet</li>
+      <li>Green Hills</li><li>Lebanon</li>
+      <li>Hermitage</li><li>Old Hickory</li>
+      <li>Donelson</li><li>Bellevue</li>
+    </ul>
+    <div class="btn-row" style="margin-top:30px">
+      <a class="btn btn--blue" href="service-area.html">See full coverage</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--panel" id="reviews">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow">Reviews</p>
+      <h2 class="h-lg">What Nashville homeowners say</h2>
+    </div>
+    <div class="grid grid--3"><article class="review reveal" data-d="0">
+      <span class="stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg></span>
+      <p>Dryer took three cycles to get towels dry and I was ready to buy a new one. They pulled a mat of lint out of the elbow and showed me the photos. One cycle now. The dryer was never the problem.</p>
+      <div class="review__who">
+        <span class="review__avatar" aria-hidden="true">KR</span>
+        <span>
+          <span class="review__name">Katherine R.</span>
+          <span class="review__meta">Green Hills &middot; Google review</span>
+        </span>
+      </div>
+    </article><article class="review reveal" data-d="1">
+      <span class="stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg></span>
+      <p>Booked online Sunday night, they were here Tuesday morning. Put down a mat, moved the dryer, cleaned up so well I could not tell anyone had been in the laundry room. Price was exactly what the website said.</p>
+      <div class="review__who">
+        <span class="review__avatar" aria-hidden="true">MD</span>
+        <span>
+          <span class="review__name">Marcus D.</span>
+          <span class="review__meta">Mt. Juliet &middot; Google review</span>
+        </span>
+      </div>
+    </article><article class="review reveal" data-d="2">
+      <span class="stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9L12 2Z"/></svg></span>
+      <p>I manage eleven rental units and I have used a lot of vendors. These guys send dated before and after photos for every unit without being asked. That paperwork alone is worth the call.</p>
+      <div class="review__who">
+        <span class="review__avatar" aria-hidden="true">PN</span>
+        <span>
+          <span class="review__name">Priya N.</span>
+          <span class="review__meta">Donelson &middot; Google review</span>
+        </span>
+      </div>
+    </article></div>
   </div>
 </section>
 
 <section class="section" id="faq">
-  <div class="container faq">
+  <div class="container container--narrow">
     <div class="section-head reveal">
       <p class="eyebrow">Questions</p>
-      <h2>Straight answers.</h2>
+      <h2 class="h-lg">Straight answers</h2>
     </div>
-    <details class="reveal"><summary>How often should I clean my dryer vent?</summary><p>Many homes schedule cleaning once a year. Heavy use, long vent runs, and repeat drying cycles may mean it should be done more often.</p></details>
-    <details class="reveal"><summary>How long does it take?</summary><p>Most standard appointments take about 45 to 60 minutes.</p></details>
-    <details class="reveal"><summary>What is included in the $199?</summary><p>The vent line, exterior hood, transition hose check, cleanup, and before-and-after photos.</p></details>
-    <details class="reveal"><summary>Do you clean rooftop vents?</summary><p>Yes, when the roof can be accessed safely. Any rooftop add-on is explained before work starts.</p></details>
+    <div class="faq reveal"><details class="faq__item">
+      <summary>How often should I clean my dryer vent?</summary>
+      <div class="faq__answer"><p>Once a year for a typical household. Move to every six months if you run more than five loads a week, if your duct is longer than 25 feet, or if anyone in the house has long hair or you wash a lot of pet bedding.</p><p>The honest signal is time, not the calendar: when a normal load stops drying in one cycle, the vent is telling you it is restricted.</p></div>
+    </details><details class="faq__item">
+      <summary>How long does it take?</summary>
+      <div class="faq__answer"><p>Most jobs run 40 to 60 minutes from knock to final photo. Long duct runs, second-floor laundry rooms, and roof terminations can push it to about 90 minutes. We will tell you which one you have when we look at the exterior hood.</p></div>
+    </details><details class="faq__item">
+      <summary>What is included in the $199?</summary>
+      <div class="faq__answer"><p>The full duct line from the dryer to the exterior hood, brushed and vacuumed. The exterior hood and damper cleaned. The transition hose inspected and reconnected. Before and after photos of your own duct, texted to you the same day.</p><p>There is no separate trip charge, fuel surcharge, or disposal fee.</p></div>
+    </details><details class="faq__item">
+      <summary>Do you clean rooftop vents?</summary>
+      <div class="faq__answer"><p>Yes, on single-story and standard two-story homes with safe roof access. Roof terminations carry a $60 add-on because of the setup and fall protection involved. We quote it before we start, never after.</p></div>
+    </details><details class="faq__item">
+      <summary>Can I stay home during the appointment?</summary>
+      <div class="faq__answer"><p>Please do. The work is quiet, contained, and takes under an hour. We bring a mat for the floor and a HEPA vacuum that captures lint at the source, so there is nothing airborne in the laundry room.</p></div>
+    </details></div>
+  </div>
+  <div class="container container--narrow" style="margin-top:36px">
+    <a class="btn btn--ghost" href="faq.html">Read all questions</a>
   </div>
 </section>
 
-<section class="cta" id="book">
-  <div class="container reveal">
-    <p class="eyebrow" style="justify-content:center">Book service</p>
-    <h2>Ready for a clear vent line?</h2>
-    <p class="lead" style="margin:24px auto 0">Call or book online to schedule your dryer vent cleaning.</p>
-    <div class="actions">
-      <a class="btn btn-red" href="mailto:hello@marshallandsons.com?subject=Dryer%20Vent%20Cleaning%20Request">Book Online</a>
-      <a class="btn btn-ghost" href="tel:+16155550142">Call (615) 555-0142</a>
+<section class="section cta">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="h-xl">Ready for a clear vent line?</h2>
+      <p class="lede" style="margin:22px auto 0;text-align:center">Book your appointment today.</p>
+      <div class="btn-row">
+        <a class="btn btn--red" href="tel:+16155550142"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L21 14.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 5.2 2 2 0 0 1 6.5 3Z"/></svg> Call now</a>
+        <a class="btn btn--ghost" href="book.html">Book online</a>
+      </div>
+      <span class="cta__phone">(615) 555-0142 &nbsp;&middot;&nbsp; Mon&ndash;Sat, 7am&ndash;7pm</span>
     </div>
   </div>
 </section>
+
 </main>
-
 <footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <div class="footer-brand"><svg aria-hidden="true" aria-label="Marshall and Sons louver mark" class="brand-mark" role="img" viewbox="0 0 460 484">
-<rect fill="none" height="435" rx="27" stroke="var(--mark-blue,#2062A8)" stroke-width="13" width="410" x="24.5" y="24.5"></rect>
-<g fill="var(--mark-blue,#2062A8)">
-<circle cx="52" cy="45" r="10"></circle><circle cx="408" cy="45" r="10"></circle>
-<circle cx="52" cy="439" r="10"></circle><circle cx="408" cy="439" r="10"></circle>
-</g>
-<g stroke-linejoin="round" stroke-width="7">
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)" transform="translate(0,88)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)" transform="translate(0,178)"></path>
-<path d="M102 70 L358 95 L386 152 L69 121 Z" fill="#C1272D" stroke="#C1272D" transform="translate(0,266)"></path>
-</g>
-</svg><div><strong>Marshall and Sons</strong><br><small>Dryer Vent Cleaning</small></div></div>
-      <p>Serving Nashville, Davidson County, and Wilson County.</p>
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo logo--lg" href="index.html" aria-label="Marshall and Sons, home">
+      <svg class="logo__mark" viewBox="0 0 460 484" role="img" aria-label="Marshall and Sons louver mark">
+  <rect x="24.5" y="24.5" width="410" height="435" rx="27" fill="none" stroke="var(--mark-blue,#2062A8)" stroke-width="13"/>
+  <g fill="var(--mark-blue,#2062A8)">
+    <circle cx="52" cy="45" r="10"/><circle cx="408" cy="45" r="10"/>
+    <circle cx="52" cy="439" r="10"/><circle cx="408" cy="439" r="10"/>
+  </g>
+  <g stroke-linejoin="round" stroke-width="7">
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,88)" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,178)" fill="var(--mark-blue,#2062A8)" stroke="var(--mark-blue,#2062A8)"/>
+    <path d="M102 70 L358 95 L386 152 L69 121 Z" transform="translate(0,266)" fill="#C1272D" stroke="#C1272D"/>
+  </g>
+</svg>
+      <span class="logo__type">
+        <span class="logo__name">Marshall and Sons</span>
+        <span class="logo__sub">Dryer Vent Cleaning</span>
+      </span>
+    </a>
+        <p class="footer__blurb">Specialist dryer vent cleaning for Nashville homeowners and property managers. One service, done to a measurable standard.</p>
+        <div class="footer__social">
+          <a href="https://facebook.com/" aria-label="Marshall and Sons on Facebook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9V7.2c0-.9.2-1.3 1.5-1.3H17V3h-2.6C11.2 3 10 4.4 10 7v2H8v3h2v9h4v-9h2.7l.3-3H14Z"/></svg></a>
+          <a href="https://g.page/" aria-label="Marshall and Sons on Google Business" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4Z"/><path d="M12 22c2.7 0 4.9-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.7-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22Z"/><path d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 0 0 0 9.2L6.4 14Z"/><path d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3.1 7.4L6.4 10c.8-2.4 3-4.1 5.6-4.1Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="why-us.html">Why us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service area</h4>
+        <ul>
+          <li><a href="service-area.html">Davidson County</a></li>
+          <li><a href="service-area.html">Wilson County</a></li>
+          <li><a href="service-area.html">Nashville</a></li>
+          <li><a href="service-area.html">Mt. Juliet</a></li>
+          <li><a href="service-area.html">Lebanon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+16155550142">(615) 555-0142</a></li>
+          <li><a href="mailto:hello@marshallandsons.com">hello@marshallandsons.com</a></li>
+          <li><a href="https://marshallandsons.com">marshallandsons.com</a></li>
+          <li class="muted">Mon&ndash;Sat, 7am&ndash;7pm</li>
+        </ul>
+        <a class="btn btn--blue" style="margin-top:22px" href="book.html">Book now</a>
+      </div>
     </div>
-    <div><strong>Contact</strong><p style="margin-top:14px">(615) 555-0142<br>hello@marshallandsons.com</p></div>
-    <div><strong>Hours</strong><p style="margin-top:14px">Monday–Saturday<br>7:00 AM–7:00 PM</p></div>
+    <div class="footer__bar">
+      <span>&copy; 2026 Marshall and Sons LLC &middot; Nashville, TN</span>
+      <span>Licensed &amp; insured &middot; Dryer vent cleaning only</span>
+    </div>
   </div>
-  <div class="container" style="margin-top:38px;padding-top:24px;border-top:1px solid var(--line)"><small>© 2026 Marshall & Sons. All rights reserved.</small></div>
 </footer>
+<div class="callbar">
+  <a href="tel:+16155550142"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2L21 14.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 5.2 2 2 0 0 1 6.5 3Z"/></svg> Call now</a>
+  <a href="book.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg> Book online</a>
+</div>
+<script>/* Marshall & Sons — site behaviour. No dependencies. */
+(function () {
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-<script>
-const nav=document.getElementById('nav');
-const menu=document.getElementById('menu');
-const links=document.getElementById('navLinks');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>18));
-menu.addEventListener('click',()=>links.classList.toggle('open'));
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  /* --- Sticky nav ------------------------------------------------------- */
+  var nav = document.querySelector(".nav");
+  if (nav) {
+    var onScroll = function () {
+      nav.classList.toggle("is-stuck", window.scrollY > 24);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    var toggle = nav.querySelector(".nav__toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var open = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      nav.querySelectorAll(".nav__links a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  }
+
+  /* --- Scroll reveal ---------------------------------------------------- */
+  var reveals = document.querySelectorAll(".reveal");
+  if (reveals.length && !reduce && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-in");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -12% 0px", threshold: 0.08 }
+    );
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  /* --- Booking / contact form ------------------------------------------- */
+  document.querySelectorAll("[data-form]").forEach(function (form) {
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var ok = true;
+      form.querySelectorAll("[required]").forEach(function (input) {
+        var field = input.closest(".field");
+        var valid = input.checkValidity() && input.value.trim() !== "";
+        if (field) field.classList.toggle("field--error", !valid);
+        if (!valid && ok) { input.focus(); ok = false; }
+      });
+      if (!ok) return;
+      /* Wire this to your booking provider (Jobber, Housecall Pro, Formspree,
+         or a Power Automate HTTP trigger). Until then it confirms locally. */
+      form.closest("[data-form-wrap]").classList.add("is-sent");
+      window.scrollTo({ top: form.closest("[data-form-wrap]").offsetTop - 120, behavior: reduce ? "auto" : "smooth" });
+    });
+    form.querySelectorAll("input,select,textarea").forEach(function (input) {
+      input.addEventListener("input", function () {
+        var field = input.closest(".field");
+        if (field && input.value.trim() !== "") field.classList.remove("field--error");
+      });
+    });
+  });
+
+  /* --- Accordion: one open at a time ------------------------------------ */
+  var faqs = document.querySelectorAll(".faq");
+  faqs.forEach(function (group) {
+    var items = group.querySelectorAll(".faq__item");
+    items.forEach(function (item) {
+      item.addEventListener("toggle", function () {
+        if (!item.open) return;
+        items.forEach(function (other) { if (other !== item) other.open = false; });
+      });
+    });
+  });
+})();
 </script>
 </body>
 </html>
