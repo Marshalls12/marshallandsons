@@ -641,6 +641,17 @@ a.contact-tile:hover{background:rgba(255,255,255,.03)}
 .card .savings__table th{font-size:.68rem;padding-bottom:11px}
 .card .savings__table td{padding:11px 0;font-size:.92rem}
 .card .savings__table td:first-child{padding-right:14px}
+
+/* --- Before / after gallery ---------------------------------------------- */
+.ba-row{margin-top:38px}
+.ba-row:first-of-type{margin-top:8px}
+.ba-row__head{margin-bottom:16px;max-width:64ch}
+.ba-row__head .h-sm{margin-bottom:6px}
+.ba-row__head p{font-size:.98rem;color:var(--steel-text)}
+@media (max-width:560px){
+  .ba-row{margin-top:30px}
+  .ba-row__head p{font-size:.92rem}
+}
 </style>
 <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -771,18 +782,54 @@ a.contact-tile:hover{background:rgba(255,255,255,.03)}
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">Real work</p>
-      <h2 class="h-lg">The same vent,<br>before and after.</h2>
-      <p class="lede">Not a stock photo. This is a dryer vent we cleaned in Nashville, shot with the inspection camera before we started and again when we finished. You get the same set from your own vent, sent the same day.</p>
+      <h2 class="h-lg">Our own jobs,<br>before and after.</h2>
+      <p class="lede">Not stock photos. These are jobs we have done in Nashville, photographed the same way we photograph yours. You get the same set from your own home, sent the same day.</p>
     </div>
-    <div class="ba reveal">
-      <figure class="ba__item">
-        <img src="assets/vent-before.jpg" alt="Inside a dryer vent before cleaning, the duct wall thick with matted lint" width="1000" height="1000" loading="lazy" decoding="async">
-        <figcaption class="ba__tag ba__tag--before">Before</figcaption>
-      </figure>
-      <figure class="ba__item">
-        <img src="assets/vent-after.jpg" alt="The same dryer vent after cleaning, bare metal duct wall with a clear opening" width="1000" height="1000" loading="lazy" decoding="async">
-        <figcaption class="ba__tag ba__tag--after">After</figcaption>
-      </figure>
+    <div class="ba-row reveal" data-d="0">
+      <div class="ba-row__head">
+        <h3 class="h-sm">Inside the duct line</h3>
+        <p>Shot with the inspection camera before we started and again when we finished. The same run, same angle.</p>
+      </div>
+      <div class="ba">
+        <figure class="ba__item">
+          <img src="assets/vent-before.jpg" alt="Inside a dryer vent before cleaning, the duct wall thick with matted lint" width="1000" height="1000" loading="lazy" decoding="async">
+          <figcaption class="ba__tag ba__tag--before">Before</figcaption>
+        </figure>
+        <figure class="ba__item">
+          <img src="assets/vent-after.jpg" alt="The same dryer vent after cleaning, bare metal duct wall with a clear opening" width="1000" height="1000" loading="lazy" decoding="async">
+          <figcaption class="ba__tag ba__tag--after">After</figcaption>
+        </figure>
+      </div>
+    </div><div class="ba-row reveal" data-d="1">
+      <div class="ba-row__head">
+        <h3 class="h-sm">The exterior termination</h3>
+        <p>The old hood was crushed and buried behind a woodpile, so the damper could not open. Replaced, and the wall cleared so it can breathe.</p>
+      </div>
+      <div class="ba">
+        <figure class="ba__item">
+          <img src="assets/hood-before.jpg" alt="A crushed metal dryer vent hood on a brick wall, blocked by a stack of firewood" width="1000" height="1000" loading="lazy" decoding="async">
+          <figcaption class="ba__tag ba__tag--before">Before</figcaption>
+        </figure>
+        <figure class="ba__item">
+          <img src="assets/hood-after.jpg" alt="A new white dryer vent hood installed on the same brick wall, clear of obstructions" width="1000" height="1000" loading="lazy" decoding="async">
+          <figcaption class="ba__tag ba__tag--after">After</figcaption>
+        </figure>
+      </div>
+    </div><div class="ba-row reveal" data-d="2">
+      <div class="ba-row__head">
+        <h3 class="h-sm">The duct run</h3>
+        <p>The original line was old, unsupported and covered in years of dust. Replaced with rigid metal, sealed at every joint and strapped to the joists.</p>
+      </div>
+      <div class="ba">
+        <figure class="ba__item">
+          <img src="assets/duct-before.jpg" alt="An old unsupported dryer duct in a crawlspace, covered in dust and cobwebs" width="1000" height="1000" loading="lazy" decoding="async">
+          <figcaption class="ba__tag ba__tag--before">Before</figcaption>
+        </figure>
+        <figure class="ba__item">
+          <img src="assets/duct-after.jpg" alt="A new rigid metal dryer duct, foil sealed at the joints and strapped to the floor joists" width="1000" height="1000" loading="lazy" decoding="async">
+          <figcaption class="ba__tag ba__tag--after">After</figcaption>
+        </figure>
+      </div>
     </div>
     <p class="ba__note">Every job is photographed the same way. The pictures are yours whether or not you ever call us again.</p>
   </div>
